@@ -1,0 +1,111 @@
+namespace: App\Tests
+paths:
+    tests: tests
+    output: tests/_output
+    data: tests/_data
+    support: tests/_support
+    envs: tests/_envs
+actor_suffix: Tester
+extensions:
+modules:
+    enabled:
+        - Db:
+                dsn: '%DB_DSN%'
+                user: '%DB_USERNAME%'
+                password: '%DB_PASSWORD%'
+
+params:
+groups:
+    admintests:
+        [
+            tests/api/dbConnectCest.php
+            tests/api/AdminTests/_01_PersonCest.php:createPerson
+            tests/api/AdminTests/_01_PersonCest.php:getPersonByRegion
+            tests/api/AdminTests/_01_PersonCest.php:editPerson
+            tests/api/AdminTests/_02_PageCest.php:createPage
+            tests/api/AdminTests/_02_PageCest.php:updatePage
+            tests/api/AdminTests/_02_PageCest.php:getPageTest
+            tests/api/AdminTests/_02_PageCest.php:getLinkedPageByPageId
+            tests/api/AdminTests/_02_PageCest.php:getCommentsToPage
+            tests/api/AdminTests/_03_CategoryCest.php:createCategory
+            tests/api/AdminTests/_03_CategoryCest.php:getCategoryPages
+            tests/api/AdminTests/_03_CategoryCest.php:editCategory
+            tests/api/AdminTests/_04_RegionCest.php:createRegion
+            tests/api/AdminTests/_04_RegionCest.php:editRegion
+            tests/api/AdminTests/_05_TaskCest.php:createTask
+            tests/api/AdminTests/_05_TaskCest.php:editTask
+            tests/api/AdminTests/_05_TaskCest.php:getTaskTest
+            tests/api/AdminTests/_06_EventCest.php:createEvent
+            tests/api/AdminTests/_06_EventCest.php:getEventTest
+            tests/api/AdminTests/_06_EventCest.php:editEvent
+            tests/api/AdminTests/_08_ObjectCest.php
+            tests/api/AdminTests/_01_PersonCest.php:deletePerson
+            tests/api/AdminTests/_02_PageCest.php:deletePage
+            tests/api/AdminTests/_03_CategoryCest.php:deleteCategory
+            tests/api/AdminTests/_04_RegionCest.php:deleteRegion
+            tests/api/AdminTests/_05_TaskCest.php:deleteTask
+            tests/api/AdminTests/_06_EventCest.php:deleteEvent
+            tests/api/getCest.php
+        ]
+    curtests:
+        [
+            tests/api/dbConnectCest.php
+            tests/api/UserCurTests/_01_PersonCurCest.php:createPerson
+            tests/api/UserCurTests/_01_PersonCurCest.php:getPersonByRegion
+            tests/api/UserCurTests/_01_PersonCurCest.php:editPerson
+            tests/api/UserCurTests/_02_PageCurCest.php:createPage
+            tests/api/UserCurTests/_02_PageCurCest.php:updatePage
+            tests/api/UserCurTests/_02_PageCurCest.php:getPageTest
+            tests/api/UserCurTests/_02_PageCurCest.php:getLinkedPageByPageId
+            tests/api/UserCurTests/_02_PageCurCest.php:getCommentsToPage
+            tests/api/UserCurTests/_03_CategoryCurCest.php:createCategory
+            tests/api/UserCurTests/_03_CategoryCurCest.php:getCategoryPages
+            tests/api/UserCurTests/_03_CategoryCurCest.php:editCategory
+            tests/api/UserCurTests/_04_RegionCurCest.php:createRegion
+            tests/api/UserCurTests/_04_RegionCurCest.php:editRegion
+            tests/api/UserCurTests/_05_TaskCurCest.php:createTask
+            tests/api/UserCurTests/_05_TaskCurCest.php:editTask
+            tests/api/UserCurTests/_05_TaskCurCest.php:getTaskTest
+            tests/api/UserCurTests/_06_EventCurCest.php:createEvent
+            tests/api/UserCurTests/_06_EventCurCest.php:getEventTest
+            tests/api/UserCurTests/_06_EventCurCest.php:editEvent
+            tests/api/UserCurTests/_08_ObjectCurCest.php
+            tests/api/UserCurTests/_01_PersonCurCest.php:deletePerson
+            tests/api/UserCurTests/_02_PageCurCest.php:deletePage
+            tests/api/UserCurTests/_03_CategoryCurCest.php:deleteCategory
+            tests/api/UserCurTests/_04_RegionCurCest.php:deleteRegion
+            tests/api/UserCurTests/_05_TaskCurCest.php:deleteTask
+            tests/api/UserCurTests/_06_EventCurest.php:deleteEvent
+            tests/api/getCest.php
+        ]
+    usertests:
+        [
+            tests/api/dbConnectCest.php
+            tests/api/UserTests/_01_PersonUserCest.php:createPerson
+            tests/api/UserTests/_01_PersonUserCest.php:getPersonByRegion
+            tests/api/UserTests/_01_PersonUserCest.php:editPerson
+            tests/api/UserTests/_02_PageUserCest.php:createPage
+            tests/api/UserTests/_02_PageUserCest.php:updatePage
+            tests/api/UserTests/_02_PageUserCest.php:getPageTest
+            tests/api/UserTests/_02_PageUserCest.php:getLinkedPageByPageId
+            tests/api/UserTests/_02_PageUserCest.php:getCommentsToPage
+            tests/api/UserTests/_03_CategoryUserCest.php:createCategory
+            tests/api/UserTests/_03_CategoryUserCest.php:getCategoryPages
+            tests/api/UserTests/_03_CategoryUserCest.php:editCategory
+            tests/api/UserTests/_04_RegionUserCest.php:createRegion
+            tests/api/UserTests/_04_RegionUserCest.php:editRegion
+            tests/api/UserTests/_05_TaskUserCest.php:createTask
+            tests/api/UserTests/_05_TaskUserCest.php:editTask
+            tests/api/UserTests/_05_TaskUserCest.php:getTaskTest
+            tests/api/UserTests/_06_EventUserCest.php:createEvent
+            tests/api/UserTests/_06_EventUserCest.php:getEventTest
+            tests/api/UserTests/_06_EventUserCest.php:editEvent
+            tests/api/UserTests/_08_ObjectUserCest.php
+            tests/api/UserTests/_01_PersonUserCest.php:deletePerson
+            tests/api/UserTests/_02_PageUserCest.php:deletePage
+            tests/api/UserTests/_03_CategoryUserCest.php:deleteCategory
+            tests/api/UserTests/_04_RegionUserCest.php:deleteRegion
+            tests/api/UserTests/_05_TaskUserCest.php:deleteTask
+            tests/api/UserTests/_06_EventUserCest.php:deleteEvent
+            tests/api/getCest.php
+        ]

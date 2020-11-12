@@ -1,0 +1,8 @@
+actor: ApiTester
+modules:
+    enabled:
+        - REST:
+              url: http://84.201.154.155:8081
+              depends: PhpBrowser
+              timeout: 90
+        - PhpBrowser:
